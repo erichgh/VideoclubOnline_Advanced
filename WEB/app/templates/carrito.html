@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Carrito
+{% endblock%}
+
+{% block main_block %}
+
+
+<div class="main-historial-pedidos">
+    <!--Mensaje de saldo insuficiente/compra aceptada-->
+    {%if aux%}
+        <div class="error_message">
+            <p>{{aux.mensaje}}</p>
+        </div>
+    {%endif%}
+
+    <table class="tabla-estilo tamanio_columnas">
+        <thead>
+        <tr>
+            <th colspan="2">Producto</th>
+            <th>Precio</th>
+
+            <th>Cantidad</th>
+
+            <th>Operaciones carrito</th>
+        </tr>
+        </thead>
+        {% if lista_peliculas %}
+            {% for pelicula in lista_peliculas %}
+                <tr>
+
+
+                    <td><a href="{{ url_for('detalles_pelicula', prod_id=pelicula.prod_id) }}">
+                        <img alt="{{ pelicula.titulo }}"
+                             class="imagestyle"
+                             src="{{ url_for('static', filename='img/pelicula_generica.jpg') }}"></a></td>
+                    <td class="align_table_elements_left"><h3>{{ pelicula.titulo }}</h3></td>
+                    <td>{{ pelicula.price * pelicula.quantity }}€</td>
+                    <td>
+                    <a href="{{ url_for('actualizar_carrito', prod_id=pelicula.prod_id, orderid=pelicula.orderid, modificacion=1) }}">
+                        <img alt="signo suma"
+                             class="imagestylesmall"
+                             src="{{ url_for('static', filename='img/plus.svg') }}"></a>
+                        <br>{{pelicula.quantity}}
+                    <br><a href="{{ url_for('actualizar_carrito', prod_id=pelicula.prod_id, orderid=pelicula.orderid, modificacion=-1) }}">
+                        <img alt="signo resta"
+                             class="imagestylesmall"
+                             src="{{ url_for('static', filename='img/minus.svg') }}"></a>
+                    <br>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('eliminar_carrito', prod_id=pelicula.prod_id, orderid=pelicula.orderid) }}">
+                        <img alt="iono elminiar del carrito" class="imagenborrarcarrito"
+                             src="{{ url_for('static', filename='img/remove_cart.svg') }}"></a></td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td class="align_table_elements_left"><h3>Resumen pedido</h3></td>
+                <td><h3>Precio total: {{ "%.2f" | format(lista_peliculas[0].totalamount|float) }}€</h3></td>
+                <td></td>
+                <td><a href="{{url_for('realizar_pago', orderid=lista_peliculas[0].orderid)}}"><img alt="icono pagar carrito" class="imagenfinalizarpago"
+                                     src="{{ url_for('static', filename='img/confirm_payment.png') }}"></a></td>
+            </tr>
+        {%else%}
+            <tr>
+                <td></td>
+                <td></td>
+                <td><h3>Carrito vacío</h3></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        {% endif %}
+
+    </table>
+</div>
+
+{%endblock%}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ pelicula.titulo }}
+{% endblock%}
+
+{% block main_block %}
+
+{% if pelicula %}
+    <div id="film">
+
+        <div id="visual">
+            <figure>
+                <img alt="{{pelicula.movietitle}}"
+                     class="film"
+                     src = "{{ url_for('static', filename='img/pelicula_generica.jpg') }}">
+            </figure>
+            <figure>
+                <a href="{{url_for ('aniadir_carrito', prod_id=pelicula.prod_id)}}">
+                    <img alt="Añadir al carrito"
+                         src="{{ url_for('static', filename='img/cart.png') }}"
+                         width="300">
+                </a>
+            </figure>
+        </div>
+
+        <div id="info">
+            <br/>
+            <h2>{{ pelicula.movietitle }}</h2>
+            <p>
+                <strong>- Descripcion: </strong>{{pelicula.description}}
+                <br/><br/><strong>- Año de estreno:</strong> {{pelicula.year}}
+                <br/><br/><strong>- Precio:</strong> {{pelicula.price}} €
+            </p>
+        </div>
+    </div>
+{%else%}
+    <strong>La pelicula buscada no existe</strong>
+{%endif%}
+{% endblock%}

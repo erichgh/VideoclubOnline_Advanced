@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    About
+{% endblock%}
+
+{% block main_block %}
+
+<div class="main">
+    Estos somos nosotros:
+    <br/>
+    <img alt="It 2"
+         class="film"
+         src = "{{ url_for('static', filename='img/nosotros.jpeg') }}">
+</div>
+
+{%endblock%}

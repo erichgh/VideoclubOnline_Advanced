@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}
+Pedidos
+{% endblock%}
+
+{% block main_block %}
+
+<div class="main-historial-pedidos">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/historial_detalles.js') }}"></script>
+    <table class="tabla-estilo tamanio_columnas">
+        <thead>
+        <tr>
+            <th colspan="2">Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Fecha compra</th>
+        </tr>
+        </thead>
+        {% if lista_total %}
+        {% for pedido in lista_total %}
+        {% set x = loop.index0 %}
+        <tr>
+            <td>
+                <img alt="Desplegar" class="{{'desplegar it' ~ x }}"
+                     src="{{ url_for('static', filename='img/desplegar.svg') }}"></td>
+            </td>
+<!--                    Numero de articulos del pedido-->
+            <td><strong>Número de artículos: {{pedido[-3]}}</strong></td>
+<!--                    Precio total del pedido-->
+            <td><strong>{{pedido[-2]}}$</strong></td>
+<!--                    Artículos totales incluyendo pelis con varios artículos-->
+            <td><strong>{{pedido[-1]}}</strong></td>
+<!--                    Fecha del pedido-->
+            <td><strong>{{pedido[0]}}</strong></td>
+        </tr>
+
+        <!--Bucle para imprimir las peliculas dentro del pedido-->
+        {%for i in range(0, pedido[-3])%}
+        <tr class="{{'detalles it' ~ x }}">
+            <td><a href="{{ url_for('detalles_pelicula', film=pedido[i+1].titulo.replace(' ', '_')) }}">
+              <img alt="{{pedido[i+1].titulo}}" class="{{'imagestyle imagepedido it' ~ x }}"
+                   src="{{ url_for('static', filename='img/'+pedido[i+1].poster) }}"></a></td>
+            <td class="align_table_elements_left"><h3>{{pedido[i+1].titulo}}</h3></td>
+            <td>{{ "%.2f" | format (pedido[i+1].precio * pedido[i+1].cantidad|float) }}€</td>
+            <td>{{pedido[i+1].cantidad}}</td>
+            <td></td>
+        </tr>
+        {%endfor%}
+        {% endfor %}
+        {%else%}
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                {%if message%}
+                <p>{{message.text}}</p>
+                {%endif%}
+            </td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        {%endif%}
+    </table>
+</div>
+
+{% endblock%}

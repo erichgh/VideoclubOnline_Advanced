@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width = device-width, initial-scale=1" name="viewport">
+    <title>{% block title %} {% endblock %}- Memo</title>
+    <link href="{{ url_for('static', filename='img/icon.png') }}" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/master.css') }}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    function fetchdata(){
+        $.ajax({
+            url: '{{ url_for('people') }}',
+            type: 'get',
+            success: function(response){
+                // Perform operation on the return value
+                $('#people').text(response);
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        fetchdata();
+        setInterval(fetchdata,3000);
+    });
+</script>
+  </head>
+  <body>
+
+  <header>
+      <div class="header">
+          <div class="container logo-container">
+              <h1>MEMO</h1>
+              <nav class="navigation">
+                  <ul>
+                      {% if not session['usuario'] %}
+                          <li><a href="{{ url_for('login') }}">Iniciar Sesión</a></li>
+                          <li><a href="{{ url_for('register') }}">Cuenta Nueva</a></li>
+                      {%else%}
+
+                            <li><a href="{{ url_for('aniadir_saldo') }}">Añadir Saldo: {{ session['saldo'] }} €</a></li>
+                            <li><a href="{{ url_for('logout') }}">Cerrar sesión</a></li>
+                            <li>  👤 {{ session['usuario'] }}</li>
+                      {%endif%}
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </header>
+
+  <main>
+      <nav class="menu">
+          <ul class="top">
+              <li><a href="{{ url_for('index') }}">Inicio</a></li>
+              <li><a href="{{ url_for('carrito') }}">Compra Actual</a></li>
+              <li><a href="{{ url_for('pedidos') }}">Historial pedidos</a></li>
+          </ul>
+          <ul class="bottom">
+              <li><a href="{{ url_for('about') }}">Sobre nosotros</a></li>
+              <li><a href="{{ url_for('terms') }}">Términos de uso</a></li>
+          </ul>
+      </nav>
+      <div class="main">
+          <div class="container">
+              {%block main_block%}{%endblock%}
+          </div>
+      </div>
+  </main>
+  <footer class="footer">
+      <div class="container">
+          Prácticas de Sistemas Informáticos - <span id="onlineUsers">Usuarios Actuales: <span id="people">0</span></span> - Eric Morales y Andrés Mena
+      </div>
+  </footer>
+  </body>
+  </html>

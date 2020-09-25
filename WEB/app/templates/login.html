@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Login
+{% endblock%}
+
+{% block main_block %}
+
+<div class="mainregister linestyle bluelinks registerformsize">
+    <form action="{{ url_for('login') }}" method="post">
+        <div class="registerform">
+            <div class="centertext">
+                <h1>Inicio de sesión</h1>
+
+                {%if message%}
+                <p>{{message.text}}</p>
+                {%endif%}
+
+                <hr>
+
+                <br/>
+
+                <label><b>Nombre de usuario</b></label>
+                <input name="Username" placeholder="Username" required type="text"
+                       value="{{request.cookies.get('username') if (request.cookies.get('username') != None) else ''}}">
+
+                <label><b>Contraseña</b></label>
+                <input name="Password" placeholder="Enter Password"
+                       required type="password">
+
+                <hr>
+
+                <button class="registerbutton" type="submit"><b>Iniciar sesion</b></button>
+            </div>
+        </div>
+
+        <div class="container signin centertext">
+            <p>Si no tiene cuenta todavia, registrarse es gratis pinchando <a href="{{ url_for('register') }}">aquí</a>.</p>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

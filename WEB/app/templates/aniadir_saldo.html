@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+Añadir Saldo
+{% endblock%}
+
+{% block main_block %}
+
+<div class="mainregister linestyle bluelinks registerformsize">
+    <form action="#" method="post">
+        <div class="registerform">
+            <div class="centertext">
+                <h1>Añadir saldo</h1>
+
+                {%if message%}
+                <p>{{message.text}}</p>
+                {%endif%}
+
+                <p>¡Añada ahora felicidad a su cuenta!</p>
+                <p>Le recordamos que Memo Video dona a la fundación Salvemos el Amazonas 1€ por cada 10€ introducidos, disfrutas tú, disfrutamos todos.</p>
+                <hr>
+
+
+                <div>
+                    <label><b>Disponemos de diferentes paquetes de saldo:</b></label>
+                    <br/>
+                    <input name="price" type="radio" value="25">
+                    <label>20 €</label>  <span class="oferta parpadea">¡Por tiempo limitado llevate 5€ gratis!</span>
+                    <br/>
+                    <br/>
+                    <input name="price" type="radio" value="60">
+                    <label>50 €</label>  <span class="oferta parpadea">¡Por tiempo limitado llevate 10€ gratis!</span>
+                    <br/>
+                    <br/>
+                    <input name="price" type="radio" value="120">
+                    <label>100 €</label>  <span class="oferta parpadea">¡Por tiempo limitado llevate 20€ gratis!</span>
+                    <br/>
+                </div>
+
+                <hr>
+                <p>Para terminar, por su seguridad le solicitamos que nos confirme los siguientes datos:</p>
+                <label><b>Nombre de usuario</b></label>
+                <input name="Username" placeholder="Username" required type="text">
+
+                <label><b>Número de seguridad (CCV) de su tarjeta de crédito</b></label>
+                <input name="CVV" placeholder="CVV" required type="text">
+
+                <button class="registerbutton" type="submit"><b>Ingresar Felicidad en Memo</b></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

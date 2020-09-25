@@ -1,0 +1,610 @@
+body {
+  font-family: 'Roboto', georgia, times, serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin: 0;
+  height: 20rem;
+
+}
+
+p {
+  margin-bottom: 1.6em;
+}
+
+h1 {
+  line-height: 1.3rem;
+  font-size: 2rem;
+}
+
+.container {
+  width: 85%;
+  margin: 0 7rem;
+}
+
+header {
+  height: 5.5rem;
+}
+
+.header {
+  background: #1f2f50;
+  color: white;
+  padding: 0.8rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header h1 {
+  font-family: 'Poiret One', cursive;
+  letter-spacing: 1rem;
+  font-size: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  letter-spacing: 15px;
+  font-size: 1.4rem;
+}
+
+
+.navigation ul {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li {
+  display: inline-block;
+}
+
+.navigation ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s;
+  border-radius: 6px;
+}
+
+.navigation ul li a:hover {
+  background: #24365c;
+}
+
+main {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 5.6rem;
+  bottom: 1.8rem;
+  overflow : scroll;
+}
+
+figure a {
+  text-decoration: none;
+  color: #333;
+}
+
+.search {
+  background-image: url("../img/background.jpg");
+  height: 25rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 3rem;
+  text-align: center;
+  background-size: cover;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.search h1 {
+  font-family: 'Poiret One', cursive;
+  letter-spacing: 1rem;
+  font-size: 3rem;
+}
+
+.search a {
+  text-decoration: none;
+  color: black;
+  background: white;
+  opacity: 0.9;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s;
+  border-radius: 5px;
+}
+
+.search a:hover {
+  background: #dddddd;
+}
+
+
+.search input[type="submit"] {
+  text-decoration: none;
+  color: black;
+  background: white;
+  opacity: 0.9;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s;
+  border-radius: 5px;
+}
+
+.search input[type="submit"]:hover {
+  background: #dddddd;
+}
+
+.search input[type="text"] {
+  margin-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 25rem;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.search input[type="text"]:focus {
+  outline: none;
+}
+
+.search input[type="text"]::placeholder {
+  color: #b5b5b5;
+}
+
+
+.filtro li {
+  width: 20rem;
+  position: relative;
+  display: inline-block;
+}
+
+.filtro li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #353535;
+  text-decoration: none;
+}
+
+.filtro li a:hover {
+  transition: opacity 0.2s;
+}
+
+.categorias {
+  padding: 0;
+  position: absolute;
+  background: #1f2f50;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+.categorias li a {
+  display: block;
+  background: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin: 0;
+  text-decoration: none;
+}
+
+.categorias li a:hover {
+  background: #24365c;
+}
+
+
+.filtro li:hover .categorias {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+image {
+  margin: 0;
+}
+
+.menu {
+  padding: 0;
+  width: 15%;
+}
+
+.menu h1 {
+  font-size: 1vw;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1f2f50;
+}
+
+.menu ul {
+  position: fixed;
+  list-style-type: none;
+  padding: 0;
+  width: 15%;
+}
+
+.menu ul li {
+  display: block;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s;
+  border-radius: 0;
+}
+
+.menu ul li a:hover {
+  background: #dae2f1;
+}
+
+.bottom {
+  bottom: 0.8rem;
+}
+
+.bottom a {
+  border-top: 1px #edf1f8 solid;
+}
+
+.top a {
+  border-bottom: 1px #edf1f8 solid;
+}
+
+.main {
+  width: 85%;
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+figure {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@supports (object-fit: cover) {
+  .film {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.footer {
+  position: fixed;
+  height: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0.7rem;
+  color: #333;
+  background: #f2f2f2;
+  padding-top: 0.2rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+}
+
+#onlineUsers {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* CSS para las paginas de peliculas */
+
+#film {
+  text-align: left;
+  width: 1000px;
+  margin: 0;
+}
+
+#visual {
+  width: 400px;
+  float: left;
+}
+
+#info {
+  margin-left: 420px;
+}
+
+
+/*Css para los campos del registro*/
+
+#checkEquals {
+  visibility: hidden;
+  color: #9C1A1C;
+  margin-bottom: 0;
+}
+
+
+#checkGender {
+  visibility: hidden;
+  color: #9C1A1C;
+  margin-top: 0;
+}
+
+#pwd_info {
+  position: inherit;
+  width: 50%;
+  margin: 5px 25% 22px;
+  padding:15px;
+  background:#fefefe;
+  font-size:.875em;
+  border-radius:5px;
+  box-shadow:0 1px 3px #ccc;
+  border:1px solid #ddd;
+}
+
+#pwd_info h4 {
+  margin:0 0 10px 0;
+  padding:0;
+  font-weight:normal;
+}
+
+#pswd_info::before {
+  content: "\25B2"; /*REVISAR por que no funciona esto*/
+}
+
+#pswd_info ul li {
+  margin:10px 20px;
+
+}
+#pswd_info ul li:last-child {
+  text-align: center;
+  margin: 20px 0 25px 0;
+}
+
+.check {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+.invalid {
+  /*background:url(../images/invalid.png) no-repeat 0 50%; REVISAR */
+  margin: auto;
+  line-height:24px;
+  color:#9C1A1C;
+}
+
+/* Ancho de los campos input */
+.mainregister {
+  width: 85%;
+  padding-bottom: 2rem;
+}
+
+
+.registerformsize input[type=text], input[type=tel], input[type=password], input[type=date], input[type=email] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 25% 22px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+.centertext {
+  text-align: center;
+  font-size: medium;
+}
+
+.registerform input[type=text]:focus, input[type=tel]:focus, input[type=password]:focus, input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Style of a line division */
+.linestyle hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbutton {
+  background-color: #1f2f50;;
+  color: #ffffff;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 6px;
+}
+
+.ccv {
+  width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+.registerbutton:hover {
+  opacity: 1;
+}
+
+.bluelinks a {
+  color: dodgerblue;
+}
+
+.signin {
+  text-align: center;
+  width: 52%;
+  margin: 5px 25% 22px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+/* Css para la ventana añadir saldo */
+
+.oferta {
+  font-weight:bold;
+  color: #c91900;
+  text-transform:uppercase;
+}
+
+/* Clase para configurar la animacion de parpadeo */
+.parpadea {
+  animation-name: parpadeo;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+/*css para la tabla de pedidos*/
+.main-historial-pedidos {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.tabla-estilo {
+  background-color: white;
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.tabla-estilo th, td {
+  padding: 10px;
+}
+
+.tabla-estilo thead {
+  background-color: #1f2f50;
+  border-bottom: solid 5px #170836;
+  color: white;
+}
+
+.tabla-estilo tr:hover td {
+  background-color: #34558b;
+  color: white;
+}
+
+.imagestyle {
+  height: 10rem;
+  width: 7rem;
+}
+
+.imagepedido {
+  overflow:hidden;
+  height:0;
+}
+
+.imagestylesmall {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.desplegar {
+  height: 1.6rem;
+  width: 1.6rem;
+  padding-right: 2.7rem;
+  padding-left: 2.7rem;
+}
+
+
+/*Logo de eleminar del carrito*/
+.imagenborrarcarrito {
+  height: 3rem;
+}
+
+.imagenfinalizarpago {
+  height: 3.5rem;
+}
+
+/*Los detalles empiezan ocultos, para el desplegable*/
+.detalles td{
+  background-color: #ddd;
+  display: none;
+}
+
+/*Alinear elemento de la tabla a la izquierda*/
+.align_table_elements_left {
+  text-align: left;
+}
+
+/*Tamaño columnas carrito y historial pedidos*/
+.tamanio_columnas td:nth-child(1) {
+  width: 5%;
+}
+
+.tamanio_columnas td:nth-child(2) {
+  width: 15%;
+}
+
+.tamanio_columnas td:nth-child(3) {
+  width: 40%;
+}
+
+.tamanio_columnas td:nth-child(4) {
+  width: 20%;
+}
+
+.tamanio_columnas td:nth-child(5) {
+  width: 40%;
+}
+
+.error_message{
+  color: #9C1A1C;
+  text-decoration-color: #9C1A1C;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}

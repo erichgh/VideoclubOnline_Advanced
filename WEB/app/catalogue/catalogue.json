@@ -1,0 +1,198 @@
+{ "peliculas":
+  [
+    {
+			"id": 1,
+      "categoria": "Fantasia",
+			"titulo": "Aladdín",
+      "poster": "aladdin.jpg",
+      "descripcion": "Aladdin (Mena Massoud) es un adorable pero desafortunado ladronzuelo enamorado de la hija del Sultán, la princesa Jasmine (Naomi Scott). Para intentar conquistarla, acepta el desafío de Jafar (Marwan Kenzari), que consiste en entrar a una cueva en mitad del desierto para dar con una lámpara mágica que le concederá todos sus deseos. Allí es donde Aladdín conocerá al Genio (Will Smith), dando inicio a una aventura como nunca antes había imaginado.",
+      "precio": 11.99,
+      "pais" : "Estados Unidos",
+      "duracion": "128 min.",
+      "año": "2019",
+      "musica": "Alan Menken"
+    },
+
+    {
+      "id": 2,
+      "categoria": "Aventura",
+      "titulo": "Angry Birds 2: La película",
+      "poster": "angrybirds.jpg",
+      "descripcion": "En esta nueva aventura, tanto los cerdos como los pájaros tendrán que aunar sus fuerzas para hacer frente a Zeta, la villana interpretada por Leslie Jones. Zeta ha venido desde su isla helada en busca de un lugar más cómodo para vivir, pero su llegada está a punto de poner la vida de Red (Jason Sudeikis), Chuck (Josh Gad), Bomb (Danny McBride), Leonard (Bill Hader) y compañía patas arriba. Secuela de la película 'Angry Birds'.",
+      "precio": 9.99,
+      "pais" : "Estados Unidos",
+      "duracion": "96 min.",
+      "año": "2019",
+      "musica": "Heitor Pereira"
+    },
+
+    {
+      "id": 3,
+      "categoria": "Drama",
+      "titulo": "Bohemian Rhapsody",
+      "poster": "bohemian.jpg",
+      "descripcion": "Bohemian Rhapsody' es una celebración del grupo Queen, de su música y de su singular cantante Freddie Mercury, que desafió estereotipos para convertirse en uno de los showmans más queridos del mundo. El film plasma el meteórico ascenso de la banda al olimpo de la música a través de sus icónicas canciones y su revolucionario sonido, su crisis cuando el estilo de vida de Mercury estuvo fuera de control, y su triunfal reunión en la víspera del Live Aid, en la que Mercury, mientras sufría una enfermedad que amenazaba su vida, lidera a la banda en uno de los conciertos de rock más grandes de la historia. Refleja asimismo cómo se cimentó el legado de una banda que siempre se pareció más a una familia, y que continúa inspirando soñadores y amantes de la música hasta nuestros días.",
+      "precio": 13.99,
+      "pais" : "Reino Unido",
+      "duracion": "134 min.",
+      "año": "2018",
+      "musica": "John Ottman (Canciones: Queen)"
+    },
+
+    {
+      "id": 4,
+      "categoria": "Terror",
+      "titulo": "It. Chapter Two",
+      "poster": "it.jpg",
+      "descripcion": "Han pasado casi 30 años desde que el 'Club de los Perdedores', formado por Bill, Berverly, Richie, Ben, Eddie, Mike y Stanley, se enfrentaran al macabro y despiadado Pennywise (Bill Skarsgård). En cuanto tuvieron oportunidad, abandonaron el pueblo de Derry, en el estado de Maine, que tantos problemas les había ocasionado. Sin embargo, ahora, siendo adultos, parece que no pueden escapar de su pasado. Todos deberán enfrentarse de nuevo al temible payaso para descubrir si de verdad están preparados para superar sus traumas de la infancia.",
+      "precio": 8.99,
+      "pais" : "Estados Unidos",
+      "duracion": "169 min.",
+      "año": "2019",
+      "musica": "Benjamin Wallfisch"
+    },
+
+    {
+      "id": 5,
+      "categoria": "Romance",
+      "titulo": "La La Land",
+      "poster": "lalaland.jpg",
+      "descripcion": "Mia (Emma Stone), una joven aspirante a actriz que trabaja como camarera mientras acude a castings, y Sebastian (Ryan Gosling), un pianista de jazz que se gana la vida tocando en sórdidos tugurios, se enamoran, pero su gran ambición por llegar a la cima en sus carreras artísticas amenaza con separarlos.",
+      "precio": 13.99,
+      "pais" : "Estados Unidos",
+      "duracion": "127 min.",
+      "año": "2016",
+      "musica": "Justin Hurwitz"
+    },
+
+    {
+      "id": 6,
+      "categoria": "Fantastico",
+      "titulo": "Spider-Man",
+      "poster": "spiderman.jpg",
+      "descripcion": "Tras la muerte de sus padres, Peter Parker, un tímido estudiante, vive con su tía May y su tío Ben. Precisamente debido a su retraimiento no es un chico muy popular en el instituto. Un día le muerde una araña que ha sido modificada genéticamente; a la mañana siguiente, descubre estupefacto que posee la fuerza y la agilidad de ese insecto. Las aventuras del hombre araña se basan en el famoso cómic de Stan Lee y Steve Ditko.",
+      "precio": 15.99,
+      "pais" : "Estados Unidos",
+      "duracion": "121 min.",
+      "año": "2002",
+      "musica": "Danny Elfman (Tema: Nickelback)"
+    },
+
+    {
+      "id": 7,
+      "categoria": "Ciencia ficcion",
+      "titulo": "La guerra de las galaxias III",
+      "poster": "starwars.jpg",
+      "descripcion": "Último capítulo de la trilogía de precuelas de Star Wars, en el que Anakin Skywalker definitivamente se pasa al lado oscuro. En el Episodio III aparece el General Grievous, un ser implacable mitad-alien mitad-robot, el líder del ejército separatista Droid. Los Sith son los amos del lado oscuro de la Fuerza y los enemigos de los Jedi. Fueron prácticamente exterminados por los Jedi hace mil años, pero esta orden del mal sobrevivió en la clandestinidad.",
+      "precio": 11.99,
+      "pais" : "Estados Unidos",
+      "duracion": "135 min.",
+      "año": "2005",
+      "musica": "John Williams"
+    },
+
+    {
+      "id": 8,
+      "categoria": "Romance",
+      "titulo": "Titanic",
+      "poster": "titanic.jpg",
+      "descripcion": "Jack (DiCaprio), un joven artista, gana en una partida de cartas un pasaje para viajar a América en el Titanic, el transatlántico más grande y seguro jamás construido. A bordo conoce a Rose (Kate Winslet), una joven de una buena familia venida a menos que va a contraer un matrimonio de conveniencia con Cal (Billy Zane), un millonario engreído a quien sólo interesa el prestigioso apellido de su prometida. Jack y Rose se enamoran, pero el prometido y la madre de ella ponen todo tipo de trabas a su relación. Mientras, el gigantesco y lujoso transatlántico se aproxima hacia un inmenso iceberg.",
+      "precio": 8.99,
+      "pais" : "Estados Unidos",
+      "duracion": "195 min.",
+      "año": "1997",
+      "musica": "James Horner (Canción principal: Celine Dion)"
+    },
+
+    {
+      "id": 9,
+      "categoria": "Ciencia ficcion",
+      "titulo": "Vengadores: Endgame",
+      "poster": "vengadores.jpg",
+      "descripcion": "Después de los eventos devastadores de 'Avengers: Infinity War', el universo está en ruinas debido a las acciones de Thanos, el Titán Loco. Con la ayuda de los aliados que quedaron, los Vengadores deberán reunirse una vez más para intentar deshacer sus acciones y restaurar el orden en el universo de una vez por todas, sin importar cuáles son las consecuencias... Cuarta y última entrega de la saga 'Vengadores'.",
+      "precio": 10.99,
+      "pais" : "Estados Unidos",
+      "duracion": "181 min.",
+      "año": "2019",
+      "musica": "Alan Silvestri"
+    },
+
+    {
+      "id": 10,
+      "categoria": "Fantastico",
+      "titulo": "Toy Story 3",
+      "poster": "toystory.jpg",
+      "descripcion": "Cuando su dueño Andy se prepara para ir a la universidad, el vaquero Woody, el astronauta Buzz y el resto de sus amigos juguetes comienzan a preocuparse por su incierto futuro. Efectivamente todos acaban en una guardería, donde por ejemplo la muñeca Barbie conocerá al guapo Ken. Esta reunión de nuestros amigos con otros nuevos juguetes no será sino el principio de una serie de trepidantes y divertidas aventuras.",
+      "precio": 7.99,
+      "pais" : "Estados Unidos",
+      "duracion": "103 min.",
+      "año": "2010",
+      "musica": "Randy Newman"
+    },
+
+    {
+      "id": 11,
+      "categoria": "Comedia",
+      "titulo": "Perfectos desconocidos",
+      "poster": "perfectosdesconocidos.jpg",
+      "descripcion": "En una cena entre cuatro parejas, que se conocen de toda la vida, se propone un juego que pondrá sobre la mesa sus peores secretos: leer en voz alta los mensajes, y atender públicamente las llamadas, que reciban en sus móviles durante la cena. Remake del exitoso film italiano 'Perfetti sconosciuti' (2016), de Paolo Genovese.",
+      "precio": 13.99,
+      "pais" : "España",
+      "duracion": "96 min.",
+      "año": "2017",
+      "musica": "Víctor Reyes"
+    },
+
+    {
+      "id": 12,
+      "categoria": "Terror",
+      "titulo": "El orfanato",
+      "poster": "elorfanato.jpg",
+      "descripcion": "Laura se instala con su familia en el orfanato en el que creció de niña. Su propósito es abrir una residencia para niños discapacitados. El ambiente del viejo caserón despierta la imaginación de su hijo, que empieza a dejarse arrastrar por la fantasía. Los juegos del niño inquietan cada vez más a Laura, que empieza a sospechar que en la casa hay algo que amenaza su familia.",
+      "precio": 13.99,
+      "pais" : "España",
+      "duracion": "100 min.",
+      "año": "2007",
+      "musica": "Fernando Velázquez"
+    },
+
+    {
+      "id": 13,
+      "categoria": "Drama",
+      "titulo": "El laberinto del fauno",
+      "poster": "laberintodelfauno.jpg",
+      "descripcion": "Año 1944, posguerra española. Ofelia (Ivana Baquero) y su madre, Carmen (Ariadna Gil), que se encuentra en avanzado estado de gestación, se trasladan a un pequeño pueblo al que ha sido destinado el nuevo marido de Carmen, Vidal (Sergi López), un cruel capitán del ejército franquista por el que la niña no siente ningún afecto. La misión de Vidal es acabar con los últimos miembros de la resistencia republicana que permanecen escondidos en los montes de la zona. Otros personajes son: Mercedes (Maribel Verdú), el ama de llaves, y el médico (Álex Angulo) que se hará cargo del delicado estado de salud de Carmen. Una noche, Ofelia descubre las ruinas de un laberinto, y allí se encuentra con un fauno (Doug Jones), una extraña criatura que le hace una sorprendente revelación: ella es en realidad una princesa, la última de su estirpe, y los suyos la esperan desde hace mucho tiempo. Para poder regresar a su mágico reino, la niña deberá enfrentarse a tres pruebas.",
+      "precio": 16.99,
+      "pais" : "España",
+      "duracion": "112 min.",
+      "año": "2006",
+      "musica": "Javier Navarrete"
+    },
+
+    {
+      "id": 14,
+      "categoria": "Drama",
+      "titulo": "Joker",
+      "poster": "joker.jpg",
+      "descripcion": "Arthur Fleck (Phoenix) es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma. Película basada en Joker, el popular personaje de DC Comics y archivillano de Batman, pero que en este film toma un cariz más realista y oscuro.",
+      "precio": 12.99,
+      "pais" : "Estados Unidos",
+      "duracion": "121 min.",
+      "año": "2019",
+      "musica": "Hildur Guðnadóttir"
+    },
+
+    {
+      "id": 15,
+      "categoria": "Aventura",
+      "titulo": "Las aventuras de Tintín",
+      "poster": "tintin.jpg",
+      "descripcion": "Tintín, un joven periodista dotado de una curiosidad insaciable, y su leal perro Milú descubren que la maqueta de un barco contiene un enigmático y secular secreto que deben investigar. A partir de ese momento, Tintín se verá acosado por Ivan Ivanovitch Sakharine, un diabólico villano que cree que el joven ha robado un valioso tesoro vinculado a un cruel pirata llamado Rackham el Rojo. Pero, con la ayuda de Milú, del cascarrabias capitán Haddock y de los torpes detectives Hernández y Fernández, viajará por medio mundo, sirviéndose de su proverbial astucia para burlar a sus perseguidores y encontrar antes que ellos El Unicornio, un navío hundido que puede proporcionar la clave de una fabulosa fortuna y de una antigua maldición.",
+      "precio": 10.99,
+      "pais" : "Estados Unidos",
+      "duracion": "107 min.",
+      "año": "2011",
+      "musica": "John Williams"
+    }
+  ]
+}

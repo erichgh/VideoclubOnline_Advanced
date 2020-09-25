@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Registro
+{% endblock%}
+
+{% block main_block %}
+
+<div class="mainregister linestyle bluelinks registerformsize">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/register.js') }}"></script>
+        <form action="" method="POST" onsubmit="return checkRegister()">
+
+        <div class="registerform centertext">
+            <h1>Formulario de registro</h1>
+
+            {%if err%}
+                <div class="centertext error_message">
+                    <p>{{err.text}}</p>
+                </div>
+            {%endif%}
+
+            <hr>
+            <h2>Datos personales</h2>
+
+            <label><b>Nombre</b></label>
+            <input name="Nombre" pattern="[a-zA-Z]+" maxlength="20" required placeholder="Nombre"
+                   type="text" title="Solo letras (mayúsculas o minúsculas), espacios no adminidos, mínimo 3 caracteres, máximo 20">
+
+            <label><b>Fecha de nacimiento</b></label>
+            <input name="Nacimiento" required type="date">
+
+
+            <label><b>Telefono</b></label>
+            <input name="Phone" pattern="[0-9]{9}" placeholder="Número de telefono" title=" E.j: 619681622"
+                   type="tel">
+
+            <div>
+                <label><b>Género: </b></label>
+
+                <label>Masculino</label>
+                <input name="Genero" type="radio" value="Masculino">
+
+                <label>Femenino</label>
+                <input name="Genero" type="radio" value="Femenino">
+
+                <label>Prefiero no decirlo</label>
+                <input name="Genero" type="radio" value="Sin especificar">
+
+            </div>
+            <p></p>
+            <br/>
+            <hr>
+
+            <div>
+                <h2>Información de pago</h2>
+                <label><b>Número tarjeta</b></label>
+                <input name="Creditcard" pattern="[0-9]{16}" placeholder="Numero tárjeta" required
+                       title=" 16 cifras consecutivas. E.j: 1212454578789090" type="text">
+
+                <b>Fecha caducidad y CCV</b>
+                <br/>
+                <div class="ccv">
+                    <br/>
+                    Month:
+                    <select name="Monthcc">
+                        <option selected value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+
+                    /Year:
+                    <select name="Yearcc">
+                        <option selected value="1">2019</option>
+                        <option value="2">2020</option>
+                        <option value="3">2021</option>
+                        <option value="4">2022</option>
+                        <option value="5">2023</option>
+                        <option value="6">2024</option>
+                        <option value="7">2025</option>
+                        <option value="8">2026</option>
+                        <option value="9">2027</option>
+                        <option value="10">2028</option>
+                        <option value="11">2029</option>
+                        <option value="12">2030</option>
+                        <option value="13">2031</option>
+                        <option value="14">2032</option>
+                        <option value="15">2033</option>
+                        <option value="16">2034</option>
+                        <option value="17">2035</option>
+                        <option value="18">2036</option>
+                        <option value="19">2037</option>
+                        <option value="20">2038</option>
+                        <option value="21">2039</option>
+                        <option value="22">2040</option>
+                        <option value="23">2041</option>
+                        <option value="24">2042</option>
+                        <option value="25">2043</option>
+                    </select>
+
+                    <input name="CVV" pattern="[0-9]{3}" placeholder="CVV" required
+                           title=" 3 crifras consecutivas. E.j: 465" type="text">
+                </div>
+
+            </div>
+            <hr>
+
+            <h2>Datos de la cuenta</h2>
+
+            <label><b>Email</b></label>
+            <input name="Email" placeholder="Email" required type="email">
+
+            <!--ESTE NO FUNCIONA-->
+            <label><b>Nombre de usuario</b></label>
+            <input name="Username" pattern="[a-zA-Z0-9]{8,}" placeholder="Username" required title="Mínimo 8 caracteres. Solo admite mayúsucla, minúsculas o números" type="text">
+
+
+            <label><b>Contraseña</b></label>
+            <input id="pwd1" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter Password"
+                   required title=" 1 mayúsucla, 1 minúsucla y 1 simbolo" type="password" onkeyup="checkPassword()">
+
+            <label><b>Repetir contraseña</b></label>
+            <input id="pwd2" name="Passwordrpt" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Repeat Password"
+                   required title=" 1 mayúsucla, 1 minúsucla y 1 simbolo" type="password" onkeyup="checkPassword()">
+
+            <div id="pwd_info">
+                <h4>La contraseña debe cumplir los siguientes requisitos:</h4>
+                <ul class="check">
+                    <li id="letra" class="invalid">Incluir al menos <strong>una letra</strong></li>
+                    <li id="mayus" class="invalid">Incluir al menos <strong>una letra mayúscula</strong></li>
+                    <li id="numero" class="invalid">Incluir al menos <strong>un numero</strong></li>
+                    <li id="long" class="invalid">Incluir al menos <strong>8 caracteres</strong></li>
+                    <li id="equals" class="invalid">Las contraseñas debe ser <strong>iguales</strong></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <input checked name="terminosycondiciones" type="checkbox" value="1" title="Si quiere registrarte, tiene que
+             aceptar los terminos y condiciones" required>
+            Acepto los <a href="{{ url_for('terms') }}">términos y condiciones</a>.
+            <button class="registerbutton" type="submit"><b>Registrarse</b></button>
+
+            <p id="checkEquals">Las contraseñas deben ser iguales</p>
+            <p id="checkGender">Por favor seleccione un género</p>
+        </div>
+
+        <div class="container signin centertext">
+            <p>Si ya esta registrado, puede <a href="{{ url_for('login') }}">iniciar sesión</a>.</p>
+        </div>
+            <script></script>
+    </form>
+</div>
+
+{% endblock%}

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Inicio
+{% endblock%}
+
+{% block main_block %}
+
+<div class="search">
+    <h1>MEMO VIDEO</h1>
+    <hr>
+    <p>Bienvenido a Memo, tu plataforma de contenido audiovisual de confianza</p>
+    <br/>
+    <form action="#" method="POST">
+        <label class="hidden" for="busqueda">busqueda</label>
+        <input name="busqueda" id="busqueda" placeholder="Buscar pelicula..." type="text">
+        <input type="submit" id="send-signup" name="signup" value="Buscar" />
+    </form>
+    <br/><br/>
+    <ul class="filtro">
+        <li><a href="#">Filtrar por Categorias</a>
+            <ul class="categorias">
+                {% if categories%}
+                    {% for category in categories%}
+                        <li><a href="#">{{ category }}</a></li>
+                    {%endfor%}
+                {%else%}
+                    <li>None</li>
+            </ul>
+        {% endif %}
+
+        </li>
+    </ul>
+</div>
+{% if top_ventas %}
+    <div class = centertext>
+        <h1>Top ventas últimos 3 años</h1>
+        <table class="tabla-estilo">
+        <thead>
+        <tr>
+            <th>Año</th>
+            <th>Pelicula</th>
+            <th>Ventas</th>
+        </tr>
+        </thead>
+        {% for pelicula in top_ventas %}
+                <tr>
+                    <td>{{pelicula.anio}}</td>
+                    <td>{{pelicula.pelicula}}</td>
+                    <td>{{pelicula.ventas}}</td>
+                </tr>
+        {% endfor %}
+        </table>
+    </div>
+{%endif%}
+<br/>
+<div class="catalogo centertext">
+<div class="catalogo centertext">
+    <h1>Catálogo Actual</h1>
+    {% if catalogo %}
+        {% for pelicula in catalogo %}
+                <figure>
+                    <a href="{{ url_for('detalles_pelicula', prod_id=pelicula.prod_id) }}">
+                    <img alt="{{ pelicula.movietitle }}"
+                         class="film"
+                         src="{{ url_for('static', filename='img/pelicula_generica.jpg') }}">
+                </a>
+                <figcaption>{{ pelicula.movietitle }}--{{ pelicula.description}}</figcaption>
+            </figure>
+        {%endfor%}
+    {%else%}
+        <strong>No hay películas en el catálogo</strong>
+    {%endif%}
+
+
+</div>
+
+{% endblock%}
